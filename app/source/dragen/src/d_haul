@@ -86,11 +86,11 @@ class DHaul(object):
         # Since we are operating on a URL string, we should decode it to remove any percent encodings
         self.file_name = urllib.parse.unquote(self.file_name)
 
-        # Make sure the path exists for the target directory
-        utils.check_create_dir(self.download_dir)
-
-        # Configure the full path of the download file
-        self.download_full_path = self.download_dir + '/' + self.file_name
+        if not self.download_full_path:
+            # Make sure the path exists for the target directory
+            utils.check_create_dir(self.download_dir)
+            # Configure the full path of the download file
+            self.download_full_path = self.download_dir + '/' + self.file_name
 
         # If multipart download is enabled, use this new method
         if self.multipart_flag:
@@ -222,7 +222,6 @@ class DHaul(object):
         global s3_bucket, s3_obj_key, local_path, source_url
 
         self.logger.log('Starting d_haul download ...')
-
         # Figure out if path is dir or object
         if local_path.endswith('/'):
             # Assume local path is directory, 'full' path is not used

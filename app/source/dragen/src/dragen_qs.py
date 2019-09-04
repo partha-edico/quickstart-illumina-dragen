@@ -37,7 +37,8 @@ import six
 # printf - Print to stdout with flush
 #
 def printf(msg):
-    print(msg, file=sys.stdout, flush=True)
+    print(msg, file=sys.stdout)
+    sys.stdout.flush()
 
 
 #########################################################################################
