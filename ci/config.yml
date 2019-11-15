@@ -3,9 +3,7 @@ global:
   owner: quickstart-eng@amazon.com
   qsname: quickstart-illumina-dragen
   regions:
-    - eu-west-1
     - us-east-1
-    - us-west-2
   reporting: true
  
 tests:
@@ -14,8 +12,6 @@ tests:
     template_file: dragen-master.yaml
     regions:
       - us-east-1
-      - us-west-2
-      - eu-west-1
  # quickstart-illumina-dragent2:
  #   parameter_input: batch-params.t2.json
  #   template_file: dragen-master.template

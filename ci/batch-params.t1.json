@@ -5,7 +5,7 @@
     },
     {
         "ParameterKey": "KeyPairName",
-        "ParameterValue": "$[taskcat_getkeypair]"
+        "ParameterValue": "man-temp-devdeploy1"
     },
     {
         "ParameterKey": "PrivateSubnet1CIDR",
@@ -37,7 +37,7 @@
     },
     {
         "ParameterKey": "GenomicsS3Bucket",
-        "ParameterValue": "$[taskcat_autobucket]"
+        "ParameterValue": "man-partha-temp-data"
     },
     {
         "ParameterKey": "BidPercentage",
@@ -45,7 +45,7 @@
     },
     {
         "ParameterKey": "InstanceType",
-        "ParameterValue": "f1.2xlarge"
+        "ParameterValue": "f1.4xlarge"
     },
     {
         "ParameterKey": "RetryNumber",
